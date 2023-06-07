@@ -1,0 +1,5 @@
+# A homage to ThatGuy from the Samistine Network. Thanks for the inspiration
+# Sam! ~Alex
+# https://github.com/Samistine/SamistineNetwork-Plotme/blob/master/ThatGuy/bot.yml
+"(?i)(?=.*\\bjump\\b)(?=.*\\boff\\b)(?=.*\\ba\\b)": "Do a backflip"
+"(?i)(?=.*\\bwhat\\b)(?=.*\\bis\\b)(?=.*\\bcute\\b)": "My shiny metal ass"
