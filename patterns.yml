@@ -3,3 +3,13 @@
 # https://github.com/Samistine/SamistineNetwork-Plotme/blob/master/ThatGuy/bot.yml
 "(?i)(?=.*\\bjump\\b)(?=.*\\boff\\b)(?=.*\\ba\\b)": "Do a backflip"
 "(?i)(?=.*\\bwhat\\b)(?=.*\\bis\\b)(?=.*\\bcute\\b)": "My shiny metal ass"
+
+# A reference to the Microsoft Agents that this bot was based off of ~Alex
+"(?i)\\bearl\\b": "You rang?"
+
+# And some actual personality for our bot :) ~Alex
+"(?i)\\bbourbon\\b": "+😋"
+"(?i)\\blime coke\\b": "+😋"
+"(?i)\\bmaple\\b": "+😋"
+"@everyone": "+1117210753225728020"
+"<@!?1115784441940422686>": "+1117210753225728020"

@@ -19,8 +19,20 @@ class Earl(discord.Client):
                 if match.lastindex != None:
                     for i in range(1, match.lastindex + 1):
                         groups.append(match.group(i))
-                formatted = response.format(*groups)
-                await message.channel.send(formatted, mention_author=False, reference=message)
+                if response.startswith("+"):
+                    id = response[1:]
+                    if id.isnumeric():
+                        emoji = None
+                        try:
+                            emoji = await message.guild.fetch_emoji(id)
+                            await message.add_reaction(emoji)
+                        except:
+                            print("Failed to fetch emoji: " + id)
+                    else:
+                        await message.add_reaction(id)
+                else:
+                    formatted = response.format(*groups)
+                    await message.channel.send(formatted, mention_author=False, reference=message)
                 return
 
 intents = discord.Intents.default()
