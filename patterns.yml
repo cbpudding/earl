@@ -5,7 +5,7 @@
 "(?i)(?=.*\\bwhat\\b)(?=.*\\bis\\b)(?=.*\\bcute\\b)": "My shiny metal ass"
 
 # A reference to the Microsoft Agents that this bot was based off of ~Alex
-"(?i)\\bearl\\b": "You rang?"
+"(?i)(?:^earl\\b|\\bearl$)": "You rang?"
 
 # And some actual personality for our bot :) ~Alex
 "(?i)\\bbourbon\\b": "+😋"
