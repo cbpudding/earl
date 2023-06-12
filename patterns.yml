@@ -1,3 +1,18 @@
+# Regex patterns that the bot matches against. If a pattern matches, the bot
+# sends a response and passes the capture groups to the Python string formatter.
+# So if you include {0} in a response, it will be replaced by the first capture
+# group from the regex expression. If a response starts with a plus sign, the
+# rest of the response will be treated as an emoji(either as Unicode or as a
+# Discord snowflake) and will react to the message that triggered it. ~Alex
+"(?i)\\bearl do you like (.+)\\b":
+- "Probably one of my favorite things on this planet"
+- "Yes"
+- "Meh"
+- "No"
+- "Straight to hell with {0}"
+"(?i)\\b(bourbon|(?:cherry|lime) coke|maple)\\b": "+😋"
+"@everyone": "+1117210753225728020"
+
 # A homage to ThatGuy from the Samistine Network. Thanks for the inspiration
 # Sam! ~Alex
 # https://github.com/Samistine/SamistineNetwork-Plotme/blob/master/ThatGuy/bot.yml
@@ -5,11 +20,4 @@
 "(?i)(?=.*\\bwhat\\b)(?=.*\\bis\\b)(?=.*\\bcute\\b)": "My shiny metal ass"
 
 # A reference to the Microsoft Agents that this bot was based off of ~Alex
-"(?i)(?:^earl\\b|\\bearl$)": "You rang?"
-
-# And some actual personality for our bot :) ~Alex
-"(?i)\\bbourbon\\b": "+😋"
-"(?i)\\blime coke\\b": "+😋"
-"(?i)\\bmaple\\b": "+😋"
-"@everyone": "+1117210753225728020"
-"<@!?1115784441940422686>": "+1117210753225728020"
+# "(?i)(?:^earl\\b|\\bearl$)": "You rang?"

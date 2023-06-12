@@ -1,5 +1,7 @@
 #!/usr/bin/python
 import discord
+import hashlib
+import random
 import re
 import yaml
 
@@ -19,7 +21,22 @@ class Earl(discord.Client):
                 if match.lastindex != None:
                     for i in range(1, match.lastindex + 1):
                         groups.append(match.group(i))
-                if response.startswith("+"):
+                # Arrays mean we have multiple options. We'll either pick one at
+                # random or use the first capture group as the hash input for
+                # reproducable results. ~Alex
+                if type(response) is list:
+                    selector = 0
+                    if len(groups) > 0:
+                        victim = groups[0].lower().encode(encoding="utf8")
+                        selector = hashlib.sha1(victim).digest()[0]
+                        selector = selector % len(response)
+                    else:
+                        selector = random.randint(0, len(response) - 1)
+                    formatted = response[selector].format(*groups)
+                    await message.channel.send(formatted, mention_author=False, reference=message)
+                # If the response starts with a plus sign, then we're reacting
+                # with an emoji. ~Alex
+                elif response.startswith("+"):
                     id = response[1:]
                     if id.isnumeric():
                         emoji = None
@@ -30,6 +47,7 @@ class Earl(discord.Client):
                             print("Failed to fetch emoji: " + id)
                     else:
                         await message.add_reaction(id)
+                # Otherwise, it's a plain ol' response. Format and go. ~Alex
                 else:
                     formatted = response.format(*groups)
                     await message.channel.send(formatted, mention_author=False, reference=message)
