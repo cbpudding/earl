@@ -4,7 +4,7 @@ Earl is a project developed by Breadpudding (Alex) and his friends out of their 
 
 # Who is Earl?
 Earl is one of a few characters from Microsoft Windows XP, specifically the [Microsoft Agents](https://tmafe.com/download-center-software).
-As stated in the [Fandom page](https://the-microsoft-agent.fandom.com/wiki/Earl) Earl is a yellow alien riding a purple and white surfboard.
+As stated in the [Fandom page](https://the-microsoft-agent.fandom.com/wiki/Earl), Earl is a yellow alien riding a purple and white surfboard.
 
 # What does this bot do?
 Earl uses RegEx string matching to recognize respond or react to phrases and words.
@@ -27,4 +27,4 @@ Once again, here's a list:
 # Thanks!
 Thank you for even viewing this page! We don't expect many visitors, so even just a thought of Earl and the work put into it is very kind, and we appriciate it :)
 
-Docs written by @GL513
+Docs written by [GL513](https://github.com/GL513/)
