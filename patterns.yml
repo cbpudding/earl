@@ -4,13 +4,14 @@
 # group from the regex expression. If a response starts with a plus sign, the
 # rest of the response will be treated as an emoji(either as Unicode or as a
 # Discord snowflake) and will react to the message that triggered it. ~Alex
-"(?i)\\bearl do you like (.+)\\b":
-- "Probably one of my favorite things on this planet"
+"(?i)(?:<@!?1115784441940422686>|\\bearl) (?:do you like|are you) (.+)\\b":
+- "Absolutely"
 - "Yes"
 - "Meh"
+- "Probably"
 - "No"
-- "Straight to hell with {0}"
-"(?i)\\b(bourbon|(?:cherry|lime) coke|maple)\\b": "+😋"
+- "Definitely not"
+"(?i)\\b(?:bourbon|(?:cherry|lime) coke|maple)\\b": "+😋"
 "@everyone": "+1117210753225728020"
 
 # A homage to ThatGuy from the Samistine Network. Thanks for the inspiration
